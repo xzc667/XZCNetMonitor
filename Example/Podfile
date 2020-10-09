@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'XZCNetMonitor_Example' do
+  pod 'XZCNetMonitor', :path => '../'
+
+  target 'XZCNetMonitor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
