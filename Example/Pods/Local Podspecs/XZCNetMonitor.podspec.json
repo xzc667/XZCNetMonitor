@@ -1,0 +1,33 @@
+{
+  "name": "XZCNetMonitor",
+  "version": "0.1.0",
+  "summary": "A short description of XZCNetMonitor.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/xzc667/XZCNetMonitor",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "许智超": "xuzhichao@cnstrong.cn"
+  },
+  "source": {
+    "git": "https://github.com/xzc667/XZCNetMonitor.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XZCNetMonitor/Classes/**/*",
+  "dependencies": {
+    "YYModel": [
+
+    ],
+    "FMDB": [
+
+    ],
+    "Masonry": [
+
+    ]
+  }
+}

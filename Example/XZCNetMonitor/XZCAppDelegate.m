@@ -7,13 +7,38 @@
 //
 
 #import "XZCAppDelegate.h"
+#import <XZCNetMonitor/XZCServiceChoicePlugin.h>
+#import "XZCViewController.h"
 
 @implementation XZCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    XZCViewController *vc = [[XZCViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    
     // Override point for customization after application launch.
+        ///增加网络监听
+    #ifdef DEBUG
+        [self startServiceChoicePlugin];
+    #else
+    #endif
+    self.window.rootViewController = nav;
+
     return YES;
+}
+
+
+- (void)startServiceChoicePlugin{
+    [[XZCServiceChoicePlugin shareInstance] startServiceChoiceCurrenServiceUrl:^NSString *{
+        return @"";
+    } currenPayServiceUrl:^NSString *{
+        return @"";
+    } choiceServiceBlock:^(NSString * _Nonnull serviceUrl, NSString * _Nonnull payServiceUrl, NSString * _Nonnull imageServiceUrl) {
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -1,0 +1,33 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Masonry (1.1.0)
+  - XZCNetMonitor (0.1.0):
+    - FMDB
+    - Masonry
+    - YYModel
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - XZCNetMonitor (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - Masonry
+    - YYModel
+
+EXTERNAL SOURCES:
+  XZCNetMonitor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  XZCNetMonitor: c12046362d828e2bcc1d91caabc3fe467c02f776
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: fd3fac542182cd4c74289c37f39d3f15a5148372
+
+COCOAPODS: 1.8.4

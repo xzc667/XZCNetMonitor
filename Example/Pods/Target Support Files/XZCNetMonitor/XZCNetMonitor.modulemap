@@ -1,0 +1,6 @@
+framework module XZCNetMonitor {
+  umbrella header "XZCNetMonitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
